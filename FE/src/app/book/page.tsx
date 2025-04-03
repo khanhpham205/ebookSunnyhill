@@ -9,6 +9,7 @@ import Link from 'next/link'
 
 import { useEffect, useState } from "react";
 import { log } from "console";
+import Head from "next/head";
 
 import dotenv from 'dotenv';
 dotenv.config()

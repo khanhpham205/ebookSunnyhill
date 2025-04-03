@@ -6,6 +6,10 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
+import dotenv from 'dotenv';
+dotenv.config()
+const apiurl = process.env.NEXT_PUBLIC_API_URL;
+
 
 const Header = () => {
     const router = useRouter();
@@ -25,7 +29,7 @@ const Header = () => {
     const checkuser = async()=>{
         try {
             const jwt = localStorage.getItem('JWT')
-            const fe = await fetch('http://localhost:9000/users/check',{
+            const fe = await fetch(`${apiurl}/users/check`,{
                 method:"GET",
                 headers: {
                     'Accept': 'application/json',
