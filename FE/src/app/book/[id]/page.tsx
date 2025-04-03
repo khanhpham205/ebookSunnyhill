@@ -63,6 +63,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                 const dataUrl = canvas.toDataURL();
                 if(!imagesArray.includes(dataUrl)){ imagesArray.push(dataUrl); }
             }
+            console.log(imagesArray);
         }
 
         for (let i = 0; i < imagesArray.length; i += 2) {           
@@ -91,8 +92,8 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         })
         const res = await fe.json()
         if(fe.ok){
-            // setpdfpath(`${apiurl}/books/${res.file}`)
-            // console.log(res.file);  
+            console.log(`${apiurl}/${res.file}`);
+            
             return `${apiurl}/${res.file}`
         }
         return ''
@@ -186,7 +187,6 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                 )})
             }
         </section>
-
 
         <div className="bookhandle">
             <Button 
