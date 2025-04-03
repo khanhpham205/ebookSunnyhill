@@ -44,10 +44,6 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     let maxpdfpage = 0
 
     const renderPdfToImages = async (path:string) => {
-        const fe = await fetch(path,{
-            method:'GET',
-            mode:"no-cors"
-        })
         const pdf = await getDocument(path).promise;
         maxpdfpage=pdf.numPages;
         const tmpbk: Paper[] = []; 
@@ -103,14 +99,17 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         }
         return ''
     }
+    let i = ''
     const init = async()=>{
-        if (imagesArray.length === 0) {
-            renderPdfToImages(await fetchbook(id))
-        }
+        // if (imagesArray.length === 0) {
+        //     renderPdfToImages(await fetchbook(id))
+        // }
+        i= await fetchbook(id)
     }
-    
+
     useEffect(() => {
         init()
+
     }, [imagesArray]);
 
 
@@ -149,7 +148,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
 
     return (<section className="pagereadbook">
 
-        <section 
+        {/* <section 
             id='bookpage' 
             className='book m-4'
         >
@@ -191,9 +190,9 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                     </div>
                 )})
             }
-        </section>
+        </section> */}
 
-        <div className="bookhandle">
+        {/* <div className="bookhandle">
             <Button 
                 onClick={handleprepage}
                 id='buttonpre'
@@ -212,6 +211,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         </div>
         <div className="isloadding">
             
-        </div>
+        </div> */}
+        <embed src={i } type="" />
     </section>);
 };
