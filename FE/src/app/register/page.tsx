@@ -12,6 +12,10 @@ import { log } from "console";
 import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
 
+import dotenv from 'dotenv';
+dotenv.config()
+const apiurl = process.env.NEXT_PUBLIC_API_URL;
+
 const Register:React.FC=()=>{
     const router = useRouter();
 
@@ -34,7 +38,7 @@ const Register:React.FC=()=>{
             password: password.value
         }
         
-        const fe = await fetch('http://localhost:9000/users/login',{
+        const fe = await fetch(`${apiurl}/users/login`,{
             method:'POST',
             headers: {
                 'Accept': 'application/json',
@@ -64,7 +68,7 @@ const Register:React.FC=()=>{
             phonenumber: phonenumber.value,
             password: password.value
         }
-        const fe = await fetch('http://localhost:9000/users/signin',{
+        const fe = await fetch(`${apiurl}/users/signin`,{
             method:'POST',
             headers: {
                 'Accept': 'application/json',
