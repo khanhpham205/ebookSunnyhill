@@ -47,6 +47,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         const pdf = await getDocument(path).promise;
         maxpdfpage=pdf.numPages;
         const tmpbk: Paper[] = []; 
+        console.log(pdf);
 
         if(imagesArray.length === 0){
             for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
@@ -92,7 +93,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         })
         const res = await fe.json()
         if(fe.ok){
-            console.log(`${apiurl}/${res.file}`);
+            // console.log(`${apiurl}/${res.file}`);
             
             return `${apiurl}/${res.file}`
         }
