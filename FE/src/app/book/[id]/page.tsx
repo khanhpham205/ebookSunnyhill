@@ -46,7 +46,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     const renderPdfToImages = async (path:string) => {
         const fe = await fetch(path,{
             method:'GET',
-            mode:"cors"
+            mode:"no-cors"
         })
         const pdf = await getDocument(path).promise;
         maxpdfpage=pdf.numPages;
