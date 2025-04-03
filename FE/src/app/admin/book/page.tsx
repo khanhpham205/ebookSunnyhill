@@ -76,7 +76,7 @@ const Bookpage = ()=>{
         {books?.map((e,i)=>{
            
             return(<div className='admin_book_card'>
-                <img src={`http://localhost:9000/${e.img}`}/>
+                <img src={`${apiurl}/${e.img}`}/>
                 <div className="admin_book_card_info">
                     <h3>{e.name}</h3>
                     <p>{e.catalog.name}</p>

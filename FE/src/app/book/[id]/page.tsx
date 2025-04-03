@@ -99,30 +99,11 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     }
     const init = async()=>{
         if (imagesArray.length === 0) {
-            // console.log(pdfpath);
-            console.log(await fetchbook(id));
-            
-            // renderPdfToImages('/book/1.pdf')
-            // await renderPdfToImages(pdfpath)
-            // await renderPdfToImages(`${apiurl}/books/${res.file}`)
             renderPdfToImages(await fetchbook(id))
         }
     }
     
     useEffect(() => {
-        // if (imagesArray.length === 0) {
-        //     fetchbook(id)
-        //     console.log(pdfpath);
-            
-        //     // renderPdfToImages('/book/1.pdf')
-        //     renderPdfToImages(pdfpath).then((e)=>{
-        //         console.log('thanh cong');
-                
-        //     }).catch((err)=>{
-        //         toast.warning('Load file thất bại')
-        //         // router.push('/book')
-        //     })
-        // }
         init()
     }, [imagesArray]);
 
