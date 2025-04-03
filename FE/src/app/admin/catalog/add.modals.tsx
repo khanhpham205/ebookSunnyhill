@@ -5,6 +5,10 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
+import dotenv from 'dotenv';
+dotenv.config()
+const apiurl = process.env.NEXT_PUBLIC_API_URL;
+
 interface isShow {
     ShowModel: boolean;
     setShowModel: (value: boolean) => void;
@@ -28,7 +32,7 @@ function AddCata(props: isShow) {
             desc
         }
         //goi api add catalog
-        const fe = await fetch('http://localhost:9000/catalogs/add',{
+        const fe = await fetch(`${apiurl}/catalogs/add`,{
             method:"POST",
             headers:{
                 'Accept': 'application/json',

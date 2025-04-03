@@ -5,7 +5,9 @@ import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { title } from 'process';
-
+import dotenv from 'dotenv';
+dotenv.config()
+const apiurl = process.env.NEXT_PUBLIC_API_URL;
 interface isShow {
     ShowUpdateModel: boolean;
     setShowUpdateModel: (value: boolean) => void;
@@ -35,7 +37,7 @@ function EditCata(props: isShow) {
 
     const handleSubmit= async()=>{
         const jwt = localStorage.getItem('JWT')
-        const fe = await fetch(`http://localhost:9000/catalogs/edit/${id}`,{
+        const fe = await fetch(`${apiurl}/catalogs/edit/${id}`,{
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',

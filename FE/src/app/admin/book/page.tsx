@@ -9,8 +9,8 @@ import React, { useEffect, useState } from 'react';
 import Button from "react-bootstrap/Button";
 import Addbook from "./add.modals";
 import Editbook from './edit.modals';
-import useSWR from 'swr'
-import { Fetcher } from 'swr'
+// import useSWR from 'swr'
+// import { Fetcher } from 'swr'
 import { toast } from 'react-toastify';
 
 
@@ -45,7 +45,7 @@ const Bookpage = ()=>{
     const [showupdatemodal,setshowupdatemodal] = useState<boolean>(false)
 
     async function fetchbooks(){
-        const fe = await fetch('http://localhost:9000/books/',{
+        const fe = await fetch(`${apiurl}/books/`,{
             method:'GET',
         });
         const res = await fe.json() 

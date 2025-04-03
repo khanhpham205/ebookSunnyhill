@@ -10,24 +10,7 @@ const Banner: React.FC = () => {
 
     const [currentBanner, setCurrentBanner] = useState<number>(0);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
-    const timerRef = useRef(0);
-    
-    // const [timer, setTimer] = useState(0);
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setTimer((prev) => {
-    //             // console.log(prev); // In ra giá trị hiện tại
-    //             if (prev >= 40) {
-    //                 changeBanner();
-    //                 return 0; // Reset bộ đếm về 0
-    //             }
-    //             return prev + 1; // Tăng giá trị bộ đếm
-    //         });
-    //     }, 100);
-    
-    //     return () => clearInterval(interval); // Dọn dẹp interval khi component bị unmount
-    // }, []);
-    
+    const timerRef = useRef(0);  
 
     const cursorRef = useRef<HTMLDivElement>(null);
 

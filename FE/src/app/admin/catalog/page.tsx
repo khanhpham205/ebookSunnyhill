@@ -14,6 +14,10 @@ import AddCata from "./add.modals";
 import EditCata from './edit.modals';
 import { toast } from 'react-toastify';
 
+import dotenv from 'dotenv';
+dotenv.config()
+const apiurl = process.env.NEXT_PUBLIC_API_URL;
+
 const Catalogpage = ()=>{
     const [showaddmodal,setshowaddmodal] = useState<boolean>(false)
     const [showupdatemodal,setshowupdatemodal] = useState<boolean>(false)
@@ -22,7 +26,7 @@ const Catalogpage = ()=>{
 
     const fetcher: Fetcher<M_Catalog[]> = (url:string)=>fetch(url).then(e=>e.json())
     const {data,error, isLoading} = useSWR(
-        `http://localhost:9000/catalogs`,
+        `${apiurl}/catalogs`,
         fetcher,
         {
         revalidateIfStale: true,
@@ -37,7 +41,7 @@ const Catalogpage = ()=>{
         const jwt = localStorage.getItem('JWT')
 
         
-        const fe = await fetch(`http://localhost:9000/catalogs/delete/${id}`,{
+        const fe = await fetch(`${apiurl}/catalogs/delete/${id}`,{
             method:"DELETE",
             headers:{
                 authorization: `Bearer ${jwt}`,
