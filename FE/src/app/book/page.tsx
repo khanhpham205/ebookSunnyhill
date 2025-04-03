@@ -30,6 +30,7 @@ const Bookspage=()=>{
         }
     }
 
+
     const handlesort=(type:string)=>{
         const sortedBooks = [...books];
         switch (type) {
@@ -61,7 +62,7 @@ const Bookspage=()=>{
             </select>
             <hr style={{margin:0}} />
             {books?.map((e,i)=>{
-                return(<Link className="book_card" href={`/book/${e._id}`}>
+                return(<Link className="book_card" href={`${apiurl}/${e.file}`}>
                     <img src={`${apiurl}/${e.img}`} alt="" />
                     <h4>{e.name}</h4>
                 </Link>)
