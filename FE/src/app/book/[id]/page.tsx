@@ -45,9 +45,12 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     let maxpdfpage = 0
 
     const renderPdfToImages = async (path:string) => {
-        const response = await fetch(path);
-        const blob = await response.blob();
+        // https://cors-anywhere.herokuapp.com/
+        // const response = await fetch(path);
+        const pdff = await fetch(`https://cors-anywhere.herokuapp.com/${path}`)
+        const blob = await pdff.blob();
         const url = URL.createObjectURL(blob);
+        // const pdf = await getDocument(url).promise;
         const pdf = await getDocument(url).promise;
 
         // const pdf = await getDocument(path).promise;
