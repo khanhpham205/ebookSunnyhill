@@ -8,8 +8,6 @@
 "use client";
 // "use server";
 import Button from "react-bootstrap/Button";
-// import { BookLoader } from "react-awesome-loaders";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useEffect, useState } from "react";
 import { getDocument } from "pdfjs-dist";
 import { GlobalWorkerOptions } from "pdfjs-dist";
@@ -31,14 +29,11 @@ const apiurl = process.env.NEXT_PUBLIC_API_URL;
 export default function PdfToImage({ params }: { params: Promise<{ id: string }> }) {
     const id = use(params).id;
     
-    
-    // const router = useRouter();
     const [imagesArray,setimagesArray] = useState<string[]>([]); 
     const [book1, setBook1]             = useState<Paper[]>([]); 
     const [currentpage, setcurrentpage] = useState<number>(1);
     const [max, setmax]                 = useState<number>(0);
     const [isloaded, setisloaded]       = useState<boolean>(true);
-    // const [pdfpath, setpdfpath]         = useState<string>('');
     let maxpdfpage = 0
 
     const renderPdfToImages = async (path:string) => {
