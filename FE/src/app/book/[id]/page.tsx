@@ -155,6 +155,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         papre!.style.zIndex = String(Number(pa!.style.zIndex) + 1)
     }
 
+    // <embed src={ia} type="" />
 
     return (<section className="pagereadbook">
 
@@ -222,6 +223,5 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         <div className="isloadding">
             
         </div>
-        <embed src={ia} type="" />
     </section>);
 };

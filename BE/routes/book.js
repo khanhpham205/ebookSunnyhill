@@ -70,8 +70,8 @@ router.post("/add", uploadFiles,
             const isExist = await Book.findOne({ name })
             const newBook = new Book({
                 name,
-                img:`books/${img[0].filename}`,
-                file:`books/${file[0].filename}`,
+                img:`booksf/${img[0].filename}`,
+                file:`booksf/${file[0].filename}`,
                 catalog
             })
             if(!isExist){
@@ -106,10 +106,10 @@ router.put("/edit/:id",uploadFiles,
                 catalog
             };
             if(!!file) {
-                update.file = `books/${file[0].filename}`;
+                update.file = `booksf/${file[0].filename}`;
             }
             if(!!img){
-                update.img = `books/${img[0].filename}`;
+                update.img = `booksf/${img[0].filename}`;
             }
 
             const a = await Book.updateOne( { _id: id }, update )
