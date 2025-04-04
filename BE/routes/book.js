@@ -31,9 +31,17 @@ async function deleteFile(path) {
 var router = express.Router()
 
 router.get("/",async (req, res) => {
-    try {   
-        const a = await Book.find().populate('catalog')
-        res.status(200).json(a);
+    try {
+        const type = req.query.catalog
+        // console.log(type);
+        if(type){
+            const a = await Book.find({catalog:type}).populate('catalog')
+            res.status(200).json(a);
+        }else{
+            const a = await Book.find().populate('catalog')
+            res.status(200).json(a);
+        }
+        
     } catch (error) {
         res.status(500).json({ status: false, message: error });
     }

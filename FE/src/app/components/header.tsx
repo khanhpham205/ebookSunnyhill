@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import Dropdown from 'react-bootstrap/Dropdown';
 
 import Link from "next/link";
 
@@ -13,18 +15,11 @@ const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
 const Header = () => {
     const router = useRouter();
-    const navstyle = {
-        height: "80px",
-        backgroundColor: "#272727",
-        display: "grid",
-        gridTemplateColumns: "repeat(12,80px)",
-        gap: "20px",
-        justifyContent: "center",
-        alignItems:'center'
-    };
 
     const [isadmin,setisadmin] = useState<boolean>(false)
     const [user,setuser] = useState<string>(' ')
+    
+    const [catas,setcatas] = useState<M_Catalog[]>([])
 
     const checkuser = async()=>{
         try {
@@ -47,9 +42,31 @@ const Header = () => {
             }
         } catch (error) {throw error}
     }
+    const getcata = async()=>{
+        try {
+            const jwt = localStorage.getItem('JWT')
+            const fe = await fetch(`${apiurl}/catalogs`,{
+                method:"GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+            })
+            const res = await fe.json()
+            if(fe.ok){
+                setcatas(res)
+            }
+        } catch (error) {throw error}
+    }
     useEffect(()=>{
+        getcata()
         checkuser()
     },[])
+
+    const closebkli = ()=>{
+        document.getElementById('bookdt')!.removeAttribute("open");
+
+    }
 
     
     return (
@@ -63,8 +80,23 @@ const Header = () => {
                     Home
                 </button>
                 
-                <Link href={"../book"}>book</Link>
+                <details id='bookdt'>
+                    <summary>Books</summary>
+                    <div id="bookbycata">
+                        <Link href={"../book"} onClick={closebkli}>All books</Link>
+                        <hr/>
+                        {catas.map((e,i)=>{
+                            return<Link 
+                                onClick={closebkli} 
+                                href={`../book?catalog=${e._id}`}
+                                >{e.name}</Link>
+                        })}
+                    </div>
+                </details>
+                
+
                 {(isadmin) ? <Link  href={"../admin"}>admin</Link>: <></> }
+
                 {(user.length > 1) ? <p style={{gridColumn:'11/13'}}>{user}</p> : <Link style={{gridColumn:'11/13'}} href={"../register"}>Resister</Link>}
             </nav>
         </>

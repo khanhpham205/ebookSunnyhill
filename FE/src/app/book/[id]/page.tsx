@@ -41,6 +41,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     const [max, setmax]                 = useState<number>(0);
     const [isloaded, setisloaded]       = useState<boolean>(true);
     const [pdfpath, setpdfpath]         = useState<string>('');
+    const [ia, setia]         = useState<string>('');
     let maxpdfpage = 0
 
     const renderPdfToImages = async (path:string) => {
@@ -104,7 +105,8 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         // if (imagesArray.length === 0) {
         //     renderPdfToImages(await fetchbook(id))
         // }
-        i= await fetchbook(id)
+        // i = await fetchbook(id)
+        setia(await fetchbook(id))
     }
 
     useEffect(() => {
@@ -212,6 +214,6 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         <div className="isloadding">
             
         </div> */}
-        <embed src={i } type="" />
+        <embed src={ia} type="" />
     </section>);
 };

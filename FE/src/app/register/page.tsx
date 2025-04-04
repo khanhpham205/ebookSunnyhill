@@ -2,13 +2,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 import Button from "react-bootstrap/Button";
 import Image from 'next/image'
 
 import { useEffect, useState } from "react";
 import { log } from "console";
-// import { setInterval } from "timers/promises";
 import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
 
