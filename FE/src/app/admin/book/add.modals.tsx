@@ -47,7 +47,7 @@ function Addbook(props: isShow) {
         const form = document.getElementById('form_add_book') as HTMLFormElement
         const data = new FormData(form)
 
-        const fe = await fetch(`${apiurl}/book/add`,{
+        const fe = await fetch(`${apiurl}/books/add`,{
             method:"POST",
             body: data
         })

@@ -62,7 +62,7 @@ function EditBook(props: isShow) {
 
         const formdt = new FormData(document.getElementById('form_edit_book') as HTMLFormElement)
         const jwt = localStorage.getItem('JWT')
-        const fe = await fetch(`${apiurl}/book/edit/${id}`,{
+        const fe = await fetch(`${apiurl}/books/edit/${id}`,{
             headers: {
                 'authorization': `Bearer ${ jwt }`,
             },
