@@ -64,7 +64,8 @@ const Bookspage=()=>{
             {books?.map((e,i)=>{
                 return(<Link className="book_card" href={`book/${e._id}`}>
                     <img src={`${apiurl}/${e.img}`} alt="" />
-                    <h4>{e.name}</h4>
+                    <h5>{e.name}</h5>
+                    <p>{e.catalog.name}</p>
                 </Link>)
                 // return(<Link className="book_card" href={`${apiurl}/${e.file}`}>
                 //     <img src={`${apiurl}/${e.img}`} alt="" />

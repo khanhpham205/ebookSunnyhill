@@ -1,22 +1,23 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable prefer-const */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/jsx-key */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 // "use server";
 import Button from "react-bootstrap/Button";
-import Image from 'next/image'
-
+// import { BookLoader } from "react-awesome-loaders";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { useEffect, useState } from "react";
 import { getDocument } from "pdfjs-dist";
 import { GlobalWorkerOptions } from "pdfjs-dist";
 import { use } from "react";
-import { log } from "console";
-import { setInterval } from "timers/promises";
 import { useRouter } from 'next/navigation';
 GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Cấu hình worker
+// import { toast } from "react-toastify";
+import dotenv from 'dotenv';
 
 interface Paper{
     paper:number,
@@ -24,24 +25,20 @@ interface Paper{
     b:string | undefined
 }
 
-import dotenv from 'dotenv';
-import { toast } from "react-toastify";
 dotenv.config()
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
-// export default function PdfToImage({params}: {params: { id: string }}) {
+
 export default function PdfToImage({ params }: { params: Promise<{ id: string }> }) {
     const id = use(params).id;
-    // console.log(id);
     
     
-    const router = useRouter();
+    // const router = useRouter();
     const [imagesArray,setimagesArray] = useState<string[]>([]); 
     const [book1, setBook1]             = useState<Paper[]>([]); 
     const [currentpage, setcurrentpage] = useState<number>(1);
     const [max, setmax]                 = useState<number>(0);
     const [isloaded, setisloaded]       = useState<boolean>(true);
-    const [pdfpath, setpdfpath]         = useState<string>('');
-    const [ia, setia]         = useState<string>('');
+    // const [pdfpath, setpdfpath]         = useState<string>('');
     let maxpdfpage = 0
 
     const renderPdfToImages = async (path:string) => {
@@ -108,13 +105,11 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         }
         return ''
     }
-    let i = ''
+
     const init = async()=>{
         if (imagesArray.length === 0) {
             renderPdfToImages(await fetchbook(id))
         }
-        // i = await fetchbook(id)
-        setia(await fetchbook(id))
     }
 
     useEffect(() => {
@@ -158,7 +153,11 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     // <embed src={ia} type="" />
 
     return (<section className="pagereadbook">
-
+        <div className="loadding" hidden={!isloaded}>
+            <img src="/animation.gif" alt="" id='loadinganimation'/>
+            <h3>Page is loadding</h3>
+            <h4>Please wait</h4>
+        </div>
         <section 
             id='bookpage' 
             className='book m-4'
@@ -219,9 +218,6 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
             >
                 Next
             </Button>
-        </div>
-        <div className="isloadding">
-            
         </div>
     </section>);
 };

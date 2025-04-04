@@ -1,9 +1,12 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import Banner from './components/banner'
 // import useSWR from 'swr'
 // import { Fetcher } from 'swr'
 import dotenv from 'dotenv';
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 dotenv.config()
@@ -26,8 +29,13 @@ export default function Home() {
   },[])
   return (<>
     <Banner/>
-    <embed src={`${apiurl}/${books[0]?.file}`} type="" />
-    
-    asdasd
+    <section className='gridsys' >
+      <h3 className='fullcol mt-3'>New Book</h3>
+      {books?.map((e,i)=><Link className="book_card" href={`book/${e._id}`}>
+            <img src={`${apiurl}/${e.img}`} alt="" />
+            <h5>{e.name}</h5>
+            <p>{e.catalog.name}</p>
+        </Link>)}
+    </section>
   </>);
 }
