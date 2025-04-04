@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ToastContainer } from "react-toastify";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import "./globals.css";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <GoogleAnalytics gaId="G-NJHW6GZDR8" />
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
