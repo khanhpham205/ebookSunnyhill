@@ -102,9 +102,9 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     }
     let i = ''
     const init = async()=>{
-        // if (imagesArray.length === 0) {
-        //     renderPdfToImages(await fetchbook(id))
-        // }
+        if (imagesArray.length === 0) {
+            renderPdfToImages(await fetchbook(id))
+        }
         // i = await fetchbook(id)
         setia(await fetchbook(id))
     }
@@ -150,7 +150,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
 
     return (<section className="pagereadbook">
 
-        {/* <section 
+        <section 
             id='bookpage' 
             className='book m-4'
         >
@@ -192,9 +192,9 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                     </div>
                 )})
             }
-        </section> */}
+        </section>
 
-        {/* <div className="bookhandle">
+        <div className="bookhandle">
             <Button 
                 onClick={handleprepage}
                 id='buttonpre'
@@ -213,7 +213,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
         </div>
         <div className="isloadding">
             
-        </div> */}
+        </div>
         <embed src={ia} type="" />
     </section>);
 };
