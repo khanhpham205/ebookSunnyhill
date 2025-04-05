@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "tailwindcss";
+
+
+
+/* components */
+@import "./components/style/header.css"; /* nav */
+@import "./components/style/banner.css"; /* banner */
+
+/* page */
+@import "./register/style.css";          /* register page */
+@import "./admin/style.css";             /* admin page */
+
+
+:root {
+    /* --background: #ffffff;
+    --foreground: #171717;
+    --secondary: #dee2e6; */
+    
+    --background: #2a2b2a; 
+    --foreground: #ededed;
+    --secondary: #495057;
+    
+    --primary:#FF794C;
+
+    --invalid: red;
+    --valid:   green;
+
+
+    --minWidthColsSystem:1180px;
+    --numOfColsSystem:12;
+    --widthOfColsSystem:80px;
+    --gapOfColsSystem:20px;
+
+    --colsOfCard:span 3;
+    --pdpagegrid:span 6;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #2a2b2a; 
+        --foreground: #ededed;
+        --secondary: #495057;
+    }
+} */
+
+
+/* PC */
+@media only screen and (min-width: 1180px){
+    /* 
+        12cols
+        gridsystem : 1180px
+        colsOfCard : 3
+    */
+    :root{
+        --minWidthColsSystem:1180px;
+        --numOfColsSystem:12;
+        --widthOfColsSystem:80px;
+        --gapOfColsSystem:20px;
+
+        --colsOfCard:span 3;
+
+        --pdpagegrid:span 6;
+
+    }
+    /* nav{
+        #nav_logo {
+            grid-column: span 2;
+        }
+        #Nav_searchbar{
+            grid-column: span 1;
+        }
+        .toggle_button{
+            grid-column: 10/11;
+        }
+    } */
+}
+/* TABLET */
+@media only screen and (max-width: 1180px) and (min-width:721px) {
+    /* 
+        6cols
+        gridsystem full man hinh
+        colsOfCard : 2
+    */
+    :root{
+        --minWidthColsSystem:720px;
+
+        --numOfColsSystem:6;
+        --widthOfColsSystem:13.8%;
+        --gapOfColsSystem:3vw;
+
+        --colsOfCard:span 2;
+
+        --pdpagegrid:span 6;
+
+    }
+    nav{
+        .sunnyhilllogo{
+            grid-column: span 1 !important;
+        }
+        .regis{
+            grid-column: 6/7;
+
+        }
+    }
+
+}
+/* MOBILE */
+@media only screen and (max-width: 720px) {
+    /* 
+        6cols
+        gridsystem full man hinh
+        colsOfCard : 3
+    */
+    :root{
+        --minWidthColsSystem: 100% ;
+        --numOfColsSystem:6;
+        --widthOfColsSystem:13.8vw;
+        --gapOfColsSystem:3vw;
+
+        --colsOfCard:span 3;
+
+        --pdpagegrid:span 6;
+    }
+    nav{
+        .sunnyhilllogo{
+            grid-column: 1/2 !important;
+        }
+        .regis{
+            grid-column: 6/7;
+
+        }
+    }
+    
+    
+}
+
+body {
+    background: var(--background);
+    /* background-image: url('../../public/6085221.jpg'); */
+    background-image: url('../../public/book_pattern.jpg');
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gridsys{
+    min-width: var(--minWidthColsSystem);
+    display: grid;
+    grid-template-columns: repeat(
+        var(--numOfColsSystem),
+        var(--widthOfColsSystem)
+    );
+    justify-content: center;
+    align-items: center;
+    gap: var(--gapOfColsSystem);
+    hr {
+        width: 100%;
+        grid-column: span var(--numOfColsSystem);
+    }
+    .fullcol{
+        grid-column: span var(--numOfColsSystem);
+    }
+    .card {
+        grid-column: var(--colsOfCard);
+    }
+    p,Link{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+input:not([type=submit]),textarea,select{
+    background: var(--secondary);
+    border: none;
+    margin: 5px 0 ;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    /* &[type=submit]{
+        background-color: blue;
+    } */
+}
+input[type=submit]{
+    background-color: blue;
+}
+
+
+
+.pagereadbook{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 90vh;
+    #bookpage {
+        height: 100%;
+        min-width: 600px;
+        /* width: 100vw; */
+        width: fit-content;
+        min-height: fit-content;
+
+        position: relative;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        justify-self: center;
+        transition: .5s;
+        .paper{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            perspective: 1500px;
+            .front,
+            .back{
+                /* background-color: #272727; */
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                transform-origin: left;
+                transition: transform .5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .front{
+                z-index: -1;
+                backface-visibility: hidden;
+            }
+            .back{
+                z-index: -2;
+                .back-content{
+                    transform: rotateY(180deg);
+                }
+            }
+           
+        }
+        .flipped{
+            .front,
+            .back{
+                transform: rotateY(-180deg);
+            }
+            .front{
+                z-index: -2;
+            }
+            .back{
+                z-index: -1;
+            }
+            
+    
+        }
+    }
+    .bookhandle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loadding{
+        user-select: none;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #2a2b2a;
+        z-index: 2000;
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'Codystar';
+            font-weight: bolder;
+            font-size: 300%;
+        }
+        #loadinganimation{
+            width: 400px;
+            aspect-ratio: 1/.5;
+            object-fit: cover;
+        }
+    }
+}
+
+.title{
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 8px 10px ;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between ;
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:inherit;
+        &::after{
+            content: ' →'; 
+        }
+    }
+}
+
+
+
+.book_card{
+    user-select: none;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-column: var(--colsOfCard);
+    box-shadow: 0 0 1px var(--foreground);
+    background-color: var(--secondary);
+    color: inherit;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    text-decoration: none;
+    padding-bottom: 10px;
+    img{
+        width: 100%;
+        aspect-ratio: 1/1.4;
+        object-fit: cover;
+    }
+    h1,h2,h3,h4,h5,h6{
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        line-clamp: 1;
+        overflow: hidden;
+        padding: 10px 0 0 10px;
+        margin: 0;
+    }
+    p{
+        padding-left: 20px;
+        color:grey;
+    }
+
+
+}
