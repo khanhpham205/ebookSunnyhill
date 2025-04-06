@@ -148,7 +148,7 @@
 body {
     background: var(--background);
     /* background-image: url('../../public/6085221.jpg'); */
-    background-image: url('../../public/patt.jpg');
+    background-image: url('../../public/book_pattern.jpg');
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
