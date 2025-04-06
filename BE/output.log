@@ -1,0 +1,1864 @@
+nohup: ignoring input
+
+> ebookapi@0.0.0 start
+> node ./bin/www
+
+[0mHEAD / [32m200 [0m211.007 ms - 170[0m
+undefined
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [32m200 [0m148.513 ms - 394[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [32m200 [0m141.466 ms - 394[0m
+[0mGET /books/ [32m200 [0m145.843 ms - 302[0m
+[0mGET /booksf/Book-67f207013c1da3497439ee36.png [32m200 [0m4.347 ms - 133484[0m
+[0mOPTIONS /books/delete/67f207013c1da3497439ee37 [32m204 [0m0.808 ms - 0[0m
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+/root/ebookSunnyhill/BE/public/booksf/Book-67f207013c1da3497439ee36.png
+[0mDELETE /books/delete/67f207013c1da3497439ee37 [32m200 [0m157.514 ms - 51[0m
+[0mGET / [32m200 [0m27.096 ms - 170[0m
+[0mPROPFIND / [33m404 [0m51.758 ms - 1052[0m
+[0mHEAD / [32m200 [0m24.000 ms - 170[0m
+undefined
+[0mOPTIONS /catalogs [32m204 [0m0.458 ms - 0[0m
+[0mOPTIONS /users/check [32m204 [0m0.159 ms - 0[0m
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mGET /books/ [32m200 [0m72.140 ms - 2[0m
+[0mGET /users/check [32m200 [0m71.637 ms - 101[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [32m200 [0m135.598 ms - 394[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [36m304 [0m136.519 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [36m304 [0m137.988 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67efbdce5a2d91a2122440e2'),
+    name: '123123',
+    desc: '123123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [36m304 [0m134.475 ms - -[0m
+[0mOPTIONS /catalogs/delete/67efbdce5a2d91a2122440e2 [32m204 [0m0.241 ms - 0[0m
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+67efbdce5a2d91a2122440e2
+[0mDELETE /catalogs/delete/67efbdce5a2d91a2122440e2 [32m200 [0m146.579 ms - 51[0m
+[0mOPTIONS /catalogs/add [32m204 [0m0.221 ms - 0[0m
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mPOST /catalogs/add [32m200 [0m171.932 ms - 168[0m
+undefined
+[0mGET /books/ [36m304 [0m67.273 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [32m200 [0m131.023 ms - 428[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 0
+  }
+]
+[0mGET /catalogs [36m304 [0m137.781 ms - -[0m
+<ref *2> IncomingMessage {
+  _events: {
+    close: undefined,
+    error: undefined,
+    data: [Function: ondata],
+    end: [Function: bound onceWrapper] { listener: [Function: onend] },
+    readable: undefined
+  },
+  _readableState: ReadableState {
+    highWaterMark: 16384,
+    buffer: [],
+    bufferIndex: 0,
+    length: 0,
+    pipes: [ [Multipart] ],
+    awaitDrainWriters: null,
+    [Symbol(kState)]: 194521356
+  },
+  _maxListeners: undefined,
+  socket: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [Array],
+      error: [Array],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [Array],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 16384,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 194062596
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17564420,
+      [Symbol(kBufferedValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      _startAt: undefined,
+      _startTime: undefined,
+      writeHead: [Function: writeHead],
+      __onFinished: [Function],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 59670 },
+    [Symbol(async_id_symbol)]: 2577,
+    [Symbol(kHandle)]: TCP {
+      reading: false,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: false,
+  rawHeaders: [
+    'Connection',
+    'upgrade',
+    'Host',
+    'ebookapi.sunnyhill.io.vn',
+    'Content-Length',
+    '1856584',
+    'sec-ch-ua-platform',
+    '"Windows"',
+    'User-Agent',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
+    'sec-ch-ua',
+    '"Microsoft Edge";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+    'DNT',
+    '1',
+    'Content-Type',
+    'multipart/form-data; boundary=----WebKitFormBoundaryTvObjoOYNs54LthT',
+    'sec-ch-ua-mobile',
+    '?0',
+    'Accept',
+    '*/*',
+    'Origin',
+    'https://sunnyhill.io.vn',
+    'Sec-Fetch-Site',
+    'same-site',
+    'Sec-Fetch-Mode',
+    'cors',
+    'Sec-Fetch-Dest',
+    'empty',
+    'Referer',
+    'https://sunnyhill.io.vn/',
+    'Accept-Encoding',
+    'gzip, deflate, br, zstd',
+    'Accept-Language',
+    'vi,en;q=0.9,en-US;q=0.8'
+  ],
+  rawTrailers: [],
+  joinDuplicateHeaders: null,
+  aborted: false,
+  upgrade: false,
+  url: '/add',
+  method: 'POST',
+  statusCode: null,
+  statusMessage: null,
+  client: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [Array],
+      error: [Array],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [Array],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 16384,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 194062596
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17564420,
+      [Symbol(kBufferedValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      _startAt: undefined,
+      _startTime: undefined,
+      writeHead: [Function: writeHead],
+      __onFinished: [Function],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 59670 },
+    [Symbol(async_id_symbol)]: 2577,
+    [Symbol(kHandle)]: TCP {
+      reading: false,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  _consuming: true,
+  _dumped: false,
+  next: [Function: next],
+  baseUrl: '/books',
+  originalUrl: '/books/add',
+  _parsedUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: '/add',
+    path: '/add',
+    href: '/add',
+    _raw: '/add'
+  },
+  params: {},
+  query: {},
+  res: <ref *3> ServerResponse {
+    _events: [Object: null prototype] {
+      finish: [Array],
+      end: [Function: onevent]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: true,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: null,
+    _hasBody: true,
+    _trailer: '',
+    finished: false,
+    _headerSent: false,
+    _closed: false,
+    socket: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _eventsCount: 8,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: [Server],
+      _server: [Server],
+      parser: [HTTPParser],
+      on: [Function: socketListenerWrap],
+      addListener: [Function: socketListenerWrap],
+      prependListener: [Function: socketListenerWrap],
+      setEncoding: [Function: socketSetEncoding],
+      _paused: false,
+      _httpMessage: [Circular *3],
+      _peername: [Object],
+      [Symbol(async_id_symbol)]: 2577,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: false,
+      [Symbol(kSetKeepAliveInitialDelay)]: 0,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    _header: null,
+    _keepAliveTimeout: 5000,
+    _onPendingData: [Function: bound updateOutgoingData],
+    req: [Circular *2],
+    _sent100: false,
+    _expect_continue: false,
+    _maxRequestsPerSocket: 0,
+    locals: [Object: null prototype] {},
+    _startAt: undefined,
+    _startTime: undefined,
+    writeHead: [Function: writeHead],
+    __onFinished: [Function: listener] { queue: [Array] },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      'x-powered-by': [Array],
+      'access-control-allow-origin': [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  _startAt: [ 1233, 928205901 ],
+  _startTime: 2025-04-06T05:02:09.148Z,
+  _remoteAddress: '::ffff:127.0.0.1',
+  body: [Object: null prototype] {
+    name: 'Công nghệ blockchanin',
+    _id: '67f20ad1874b59522547d535'
+  },
+  secret: undefined,
+  cookies: [Object: null prototype] {},
+  signedCookies: [Object: null prototype] {},
+  route: Route {
+    path: '/add',
+    stack: [ [Layer], [Layer] ],
+    methods: { post: true }
+  },
+  files: [Object: null prototype] { img: [ [Object] ] },
+  _eventsCount: 2,
+  id: '67f20ad1874b59522547d535',
+  [Symbol(shapeMode)]: true,
+  [Symbol(kCapture)]: false,
+  [Symbol(kHeaders)]: {
+    connection: 'upgrade',
+    host: 'ebookapi.sunnyhill.io.vn',
+    'content-length': '1856584',
+    'sec-ch-ua-platform': '"Windows"',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
+    'sec-ch-ua': '"Microsoft Edge";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+    dnt: '1',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryTvObjoOYNs54LthT',
+    'sec-ch-ua-mobile': '?0',
+    accept: '*/*',
+    origin: 'https://sunnyhill.io.vn',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'https://sunnyhill.io.vn/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'vi,en;q=0.9,en-US;q=0.8'
+  },
+  [Symbol(kHeadersCount)]: 34,
+  [Symbol(kTrailers)]: null,
+  [Symbol(kTrailersCount)]: 0
+}
+<ref *2> IncomingMessage {
+  _events: {
+    close: undefined,
+    error: undefined,
+    data: [Function: ondata],
+    end: [Function: bound onceWrapper] { listener: [Function: onend] },
+    readable: undefined
+  },
+  _readableState: ReadableState {
+    highWaterMark: 16384,
+    buffer: [],
+    bufferIndex: 0,
+    length: 0,
+    pipes: [ [Multipart] ],
+    awaitDrainWriters: null,
+    [Symbol(kState)]: 194521356
+  },
+  _maxListeners: undefined,
+  socket: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [Array],
+      error: [Array],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [Array],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 16384,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 194062596
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17564420,
+      [Symbol(kBufferedValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      _startAt: undefined,
+      _startTime: undefined,
+      writeHead: [Function: writeHead],
+      __onFinished: [Function],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 59670 },
+    [Symbol(async_id_symbol)]: 2577,
+    [Symbol(kHandle)]: TCP {
+      reading: false,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: false,
+  rawHeaders: [
+    'Connection',
+    'upgrade',
+    'Host',
+    'ebookapi.sunnyhill.io.vn',
+    'Content-Length',
+    '1856584',
+    'sec-ch-ua-platform',
+    '"Windows"',
+    'User-Agent',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
+    'sec-ch-ua',
+    '"Microsoft Edge";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+    'DNT',
+    '1',
+    'Content-Type',
+    'multipart/form-data; boundary=----WebKitFormBoundaryTvObjoOYNs54LthT',
+    'sec-ch-ua-mobile',
+    '?0',
+    'Accept',
+    '*/*',
+    'Origin',
+    'https://sunnyhill.io.vn',
+    'Sec-Fetch-Site',
+    'same-site',
+    'Sec-Fetch-Mode',
+    'cors',
+    'Sec-Fetch-Dest',
+    'empty',
+    'Referer',
+    'https://sunnyhill.io.vn/',
+    'Accept-Encoding',
+    'gzip, deflate, br, zstd',
+    'Accept-Language',
+    'vi,en;q=0.9,en-US;q=0.8'
+  ],
+  rawTrailers: [],
+  joinDuplicateHeaders: null,
+  aborted: false,
+  upgrade: false,
+  url: '/add',
+  method: 'POST',
+  statusCode: null,
+  statusMessage: null,
+  client: <ref *1> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [Array],
+      error: [Array],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [Array],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 16384,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 194062596
+    },
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17564420,
+      [Symbol(kBufferedValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    _server: Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: [TCP],
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 16384,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::5000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 7,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 630632,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 9,
+        [Symbol(triggerId)]: 8
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *1],
+      incoming: [Circular *2],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: [HTTPServerAsyncResource]
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      socket: [Circular *1],
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *2],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      _startAt: undefined,
+      _startTime: undefined,
+      writeHead: [Function: writeHead],
+      __onFinished: [Function],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    _peername: { address: '::ffff:127.0.0.1', family: 'IPv6', port: 59670 },
+    [Symbol(async_id_symbol)]: 2577,
+    [Symbol(kHandle)]: TCP {
+      reading: false,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *1]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: null,
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  _consuming: true,
+  _dumped: false,
+  next: [Function: next],
+  baseUrl: '/books',
+  originalUrl: '/books/add',
+  _parsedUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: '/add',
+    path: '/add',
+    href: '/add',
+    _raw: '/add'
+  },
+  params: {},
+  query: {},
+  res: <ref *3> ServerResponse {
+    _events: [Object: null prototype] {
+      finish: [Array],
+      end: [Function: onevent]
+    },
+    _eventsCount: 2,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: true,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: null,
+    _hasBody: true,
+    _trailer: '',
+    finished: false,
+    _headerSent: false,
+    _closed: false,
+    socket: <ref *1> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _events: [Object],
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _eventsCount: 8,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: [Server],
+      _server: [Server],
+      parser: [HTTPParser],
+      on: [Function: socketListenerWrap],
+      addListener: [Function: socketListenerWrap],
+      prependListener: [Function: socketListenerWrap],
+      setEncoding: [Function: socketSetEncoding],
+      _paused: false,
+      _httpMessage: [Circular *3],
+      _peername: [Object],
+      [Symbol(async_id_symbol)]: 2577,
+      [Symbol(kHandle)]: [TCP],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: false,
+      [Symbol(kSetKeepAliveInitialDelay)]: 0,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    _header: null,
+    _keepAliveTimeout: 5000,
+    _onPendingData: [Function: bound updateOutgoingData],
+    req: [Circular *2],
+    _sent100: false,
+    _expect_continue: false,
+    _maxRequestsPerSocket: 0,
+    locals: [Object: null prototype] {},
+    _startAt: undefined,
+    _startTime: undefined,
+    writeHead: [Function: writeHead],
+    __onFinished: [Function: listener] { queue: [Array] },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      'x-powered-by': [Array],
+      'access-control-allow-origin': [Array]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  _startAt: [ 1233, 928205901 ],
+  _startTime: 2025-04-06T05:02:09.148Z,
+  _remoteAddress: '::ffff:127.0.0.1',
+  body: [Object: null prototype] {
+    name: 'Công nghệ blockchanin',
+    _id: '67f20ad1874b59522547d536'
+  },
+  secret: undefined,
+  cookies: [Object: null prototype] {},
+  signedCookies: [Object: null prototype] {},
+  route: Route {
+    path: '/add',
+    stack: [ [Layer], [Layer] ],
+    methods: { post: true }
+  },
+  files: [Object: null prototype] { img: [ [Object] ], file: [ [Object] ] },
+  _eventsCount: 2,
+  id: '67f20ad1874b59522547d536',
+  [Symbol(shapeMode)]: true,
+  [Symbol(kCapture)]: false,
+  [Symbol(kHeaders)]: {
+    connection: 'upgrade',
+    host: 'ebookapi.sunnyhill.io.vn',
+    'content-length': '1856584',
+    'sec-ch-ua-platform': '"Windows"',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0',
+    'sec-ch-ua': '"Microsoft Edge";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+    dnt: '1',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryTvObjoOYNs54LthT',
+    'sec-ch-ua-mobile': '?0',
+    accept: '*/*',
+    origin: 'https://sunnyhill.io.vn',
+    'sec-fetch-site': 'same-site',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    referer: 'https://sunnyhill.io.vn/',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': 'vi,en;q=0.9,en-US;q=0.8'
+  },
+  [Symbol(kHeadersCount)]: 34,
+  [Symbol(kTrailers)]: null,
+  [Symbol(kTrailersCount)]: 0
+}
+[0mPOST /books/add [32m200 [0m152.623 ms - 52[0m
+undefined
+[0mGET /books [32m200 [0m132.079 ms - 296[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [32m200 [0m1.295 ms - 823538[0m
+[0mGET /books/bookjson/67f20ad1874b59522547d536 [31m500 [0m72.054 ms - 179[0m
+[0mOPTIONS /catalogs [32m204 [0m0.371 ms - 0[0m
+[0mOPTIONS /users/check [32m204 [0m0.157 ms - 0[0m
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mGET /books/bookjson/67f20ad1874b59522547d536 [32m200 [0m144.893 ms - 2418215[0m
+[0mGET /users/check [32m200 [0m153.680 ms - 101[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [32m200 [0m210.217 ms - 428[0m
+undefined
+[0mGET /books [36m304 [0m148.094 ms - -[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [36m304 [0m1.714 ms - -[0m
+[0mGET /index.php/2025/02/09/cardi-b-deletes-instagram-after-social-media-backlash-over-her-historic-grammys-win/ [33m404 [0m41.901 ms - 1052[0m
+undefined
+[0mOPTIONS /users/check [32m204 [0m0.234 ms - 0[0m
+[0mOPTIONS /catalogs [32m204 [0m0.165 ms - 0[0m
+Bearer null
+[0mGET /users/check [33m402 [0m1.206 ms - 36[0m
+[0mGET /books [32m200 [0m130.362 ms - 296[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [32m200 [0m130.522 ms - 428[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [32m200 [0m2.099 ms - 823538[0m
+[0mHEAD / [32m200 [0m28.648 ms - 170[0m
+[0mOPTIONS /catalogs [32m204 [0m0.786 ms - 0[0m
+[0mOPTIONS /users/check [32m204 [0m0.226 ms - 0[0m
+undefined
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mGET /users/check [36m304 [0m73.947 ms - -[0m
+[0mGET /books [36m304 [0m145.157 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [36m304 [0m135.943 ms - -[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [36m304 [0m1.090 ms - -[0m
+undefined
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mGET /users/check [36m304 [0m99.610 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [36m304 [0m136.277 ms - -[0m
+[0mGET /books [36m304 [0m138.779 ms - -[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [36m304 [0m2.446 ms - -[0m
+[0mPROPFIND / [33m404 [0m50.478 ms - 1052[0m
+undefined
+[0mGET /books [36m304 [0m141.231 ms - -[0m
+undefined
+[0mGET /books [36m304 [0m133.012 ms - -[0m
+[0mHEAD / [32m200 [0m22.853 ms - 170[0m
+undefined
+[0mGET /books [36m304 [0m132.675 ms - -[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [36m304 [0m0.845 ms - -[0m
+[0mOPTIONS /catalogs [32m204 [0m0.243 ms - 0[0m
+[0mOPTIONS /users/check [32m204 [0m0.174 ms - 0[0m
+undefined
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2VlMDJlNmVjZTFiODU5MWI5NWM3NzEiLCJyb2xlIjoxLCJpYXQiOjE3NDM3NjI3NDN9.lQ_EakJsXOZ3oOe9HrYxiXRWQeQt4TddgrFiRUsmSKk
+[0mGET /users/check [36m304 [0m67.374 ms - -[0m
+[0mGET /books [36m304 [0m130.743 ms - -[0m
+[
+  {
+    _id: new ObjectId('67ea74b891d14b90522a2ba0'),
+    name: 'Sách giáo khoa',
+    desc: 'Sách giáo khoa123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67ee239dece1b8591b95cab8'),
+    name: 'Truyện',
+    desc: 'Truyện 123',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f0bebfd4f067fc8e778da2'),
+    name: 'Khoa học - Công nghệ',
+    desc: 'Khoa học - Công nghệ',
+    countbook: 0
+  },
+  {
+    _id: new ObjectId('67f20ab5874b59522547d52e'),
+    name: 'Công nghệ thông tin',
+    desc: 'Công nghệ thông tin',
+    countbook: 1
+  }
+]
+[0mGET /catalogs [36m304 [0m130.968 ms - -[0m
+[0mGET /booksf/Book-67f20ad1874b59522547d535.jpg [36m304 [0m0.798 ms - -[0m
+undefined
+[0mGET /books [36m304 [0m140.588 ms - -[0m
+[0mGET /.git/config [33m404 [0m31.264 ms - 1052[0m
+[0mGET / [32m200 [0m16.361 ms - 170[0m
+[0mGET / [32m200 [0m15.625 ms - 170[0m
+[0mGET / [32m200 [0m14.781 ms - 170[0m
+[0mGET /2025/01/24/ke-hoach-hanh-dong-quoc-gia-thuc-hien-kinh-te-tuan-hoan-den-nam-2035/ [33m404 [0m28.104 ms - 1052[0m
+[0mHEAD / [32m200 [0m21.872 ms - 170[0m
+[0mGET /favicon.ico [33m404 [0m23.764 ms - 1052[0m
+[0mHEAD / [32m200 [0m22.645 ms - 170[0m

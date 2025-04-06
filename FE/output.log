@@ -1,0 +1,13 @@
+nohup: ignoring input
+
+> ebook@0.1.0 start
+> cls & next start
+
+sh: 1: cls: not found
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3000
+   - Network:      http://103.170.122.241:3000
+
+ ✓ Starting...
+ ✓ Ready in 1053ms
+Warning: Please use the `legacy` build in Node.js environments.

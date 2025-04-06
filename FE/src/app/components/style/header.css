@@ -9,6 +9,10 @@ nav{
     & + *:not(#banner) {
         margin-top: 10px;
     }
+    #bookdt > summary{
+        list-style: none;
+        cursor: pointer;
+    }
     #bookbycata{
         z-index: 10;
         position: absolute;

@@ -1,0 +1,11 @@
+nohup: ignoring input
+/root/ebookSunnyhill/FE/node_modules/next/dist/lib/find-pages-dir.js:42
+        throw Object.defineProperty(new Error("> Couldn't find any `pages` or `app` directory. Please create one under the project root"), "__NEXT_ERROR_CODE", {
+                                    ^
+
+Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root
+    at findPagesDir (/root/ebookSunnyhill/FE/node_modules/next/dist/lib/find-pages-dir.js:42:37)
+    at initialize (/root/ebookSunnyhill/FE/node_modules/next/dist/server/lib/router-server.js:124:69)
+    at async NextCustomServer.prepare (/root/ebookSunnyhill/FE/node_modules/next/dist/server/next.js:276:28)
+
+Node.js v20.19.0
