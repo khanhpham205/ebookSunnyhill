@@ -3,9 +3,7 @@ var multer = require('multer')
 const{ auth, ckAdmin } = require('../middlewares/auth.js')
 
 const Book = require('../models/M_book.js')
-const Catalog = require('../models/M_catalog.js');
-
-// const mongoose1 = require('mongoose');
+const User = require('../models/M_user.js')
 const mongoose = require('mongoose');
 
 const { exec } = require("child_process");
@@ -13,7 +11,6 @@ const fs = require('fs');
 const path = require('path');
 
 var router = express.Router()
-
 
 const uploadFiles = multer({
     storage: multer.diskStorage({
@@ -99,7 +96,29 @@ router.get("/",async (req, res) => {
             const a = await Book.find().populate('catalog')
             res.status(200).json(a);
         }
-        
+    } catch (error) {
+        res.status(500).json({ status: false, message: error });
+    }
+});
+router.get("/generalinfo",async (req, res) => {
+    try {
+        const bookdata = await Book.find()
+        const userdata = await User.find()
+        res.status(200).json([
+            {
+                name:"Kho sách điện tử",
+                data:bookdata.length
+            },
+            {
+                name:"Số lượt xem",
+                data:1023
+            },
+            {
+                name:"Thành viên",
+                data:userdata.length
+            }
+        ]);
+
     } catch (error) {
         res.status(500).json({ status: false, message: error });
     }

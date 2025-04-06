@@ -9,14 +9,11 @@
 // "use server";
 import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
-import { getDocument } from "pdfjs-dist";
-import { GlobalWorkerOptions } from "pdfjs-dist";
 import { use } from "react";
-import { useRouter } from 'next/navigation';
-GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Cấu hình worker
 // import { toast } from "react-toastify";
 import dotenv from 'dotenv';
 import Head from "next/head";
+import { string32 } from "pdfjs-dist/types/src/shared/util";
 
 interface Paper{
     paper:number,
@@ -104,11 +101,14 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
     return (<>
         <Head><title>Đọc sách Ebook</title></Head>
         <section className="pagereadbook">
+
             <div className="loadding" hidden={!isloaded}>
                 <img src="/animation.gif" alt="" id='loadinganimation'/>
                 <h3>Page is loadding</h3>
                 <h4>Please wait</h4>
             </div>
+
+            
             <section 
                 id='bookpage'
                 className='book m-4'
@@ -127,6 +127,7 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                                     <div className="front-content">
                                         <img src={e.f} alt="" />
                                     </div>
+                                    <img className="front-content" src={e.f} alt="" />
                                 </div>
                             </div>
                         </>)
@@ -139,20 +140,15 @@ export default function PdfToImage({ params }: { params: Promise<{ id: string }>
                             key={i}
                         >
                             <div className='front'>
-                                <div className="front-content">
-                                    <img src={e.f} alt="" />
-                                </div>
+                                <img className="front-content" src={e.f} alt="" />
                             </div>
                             <div className='back'>
-                                <div className="back-content">
-                                    <img src={e.b} alt="" />
-                                </div>
+                                <img className="back-content" src={e.b} alt="" />
                             </div>
                         </div>
                     )})
                 }
             </section>
-
 
             <div className="bookhandle">
                 <Button 
