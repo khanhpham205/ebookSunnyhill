@@ -12,6 +12,7 @@
 /* page */
 @import "./register/style.css";          /* register page */
 @import "./admin/style.css";             /* admin page */
+@import "./book/bookpage.css";           /* book page */
 
 
 :root {
@@ -147,7 +148,7 @@
 body {
     background: var(--background);
     /* background-image: url('../../public/6085221.jpg'); */
-    background-image: url('../../public/book_pattern.jpg');
+    background-image: url('../../public/patt.jpg');
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -320,8 +321,6 @@ input[type=submit]{
         }
     }
 }
-
-
 
 .book_card{
     user-select: none;

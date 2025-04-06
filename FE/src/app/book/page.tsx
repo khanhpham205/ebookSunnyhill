@@ -60,8 +60,8 @@ const Bookspage=()=>{
     return (<>
         <Head><title>SunnyHill Admin</title></Head>
         <section className="bookspage gridsys">
-            <h2 style={{gridColumn:'1/10'}}>Book page</h2>
-            <select style={{gridColumn:'11/13'}} onChange={(e)=>{
+            <h2 style={{gridColumn:'1/4'}}>Book page</h2>
+            <select id='sorttag' onChange={(e)=>{
                 handlesort(e.target.value)               
             }}>
                 <option disabled selected>Sort by: </option>
