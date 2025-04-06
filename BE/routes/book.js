@@ -5,18 +5,32 @@ const{ auth, ckAdmin } = require('../middlewares/auth.js')
 const Book = require('../models/M_book.js')
 const Catalog = require('../models/M_catalog.js');
 
-const mongoose1 = require('mongoose');
+// const mongoose1 = require('mongoose');
+const mongoose = require('mongoose');
+
+const { exec } = require("child_process");
 const fs = require('fs');
 const path = require('path');
+
+var router = express.Router()
+
 
 const uploadFiles = multer({
     storage: multer.diskStorage({
         destination: function (req, file, cb) {
-            cb(null, 'public/books'); 
+            cb(null, 'public/booksf'); 
         },
         filename: function (req, file, cb) {
-            const { name } = req.body;
-            cb(null, 'Book' + '-' + name + '.' + file.originalname.split('.').at(-1)); 
+            const newId = new mongoose.Types.ObjectId();
+            req.body._id = newId.toString();
+            req.id = newId.toString(); 
+            let id = newId.toString()
+            console.log(req);
+            if(req.params.id){
+                id=req.params.id
+            }
+
+            cb(null, `Book-${id}.` + file.originalname.split('.').at(-1)); 
         }
     })
 }).fields([
@@ -25,15 +39,59 @@ const uploadFiles = multer({
 ]);
 
 async function deleteFile(path) {
-    await fs.unlink(path,()=>{});
+    if(fs.existsSync(path)){
+        await fs.unlink(path,()=>{});
+    }
 }
 
-var router = express.Router()
+async function parceToJsonGPT(pdfPath, jsonPath, id) {
+    
+    const outputDir = path.join(__dirname, '../public/imgtmp');
+    const outputPrefix = path.join(outputDir, id);
+    
+    const cmd = `pdftoppm -jpeg -r 80 "${pdfPath}" "${outputPrefix}"`;
+    
+    exec(cmd, (error, stdout, stderr) => {
+        if(error){
+            return new Error('can not parce pdf')
+        }
+
+        const images = fs.readdirSync(outputDir)
+        const data = {  
+            pages: images.map(img => {
+                const imgPath = path.join(outputDir, img);
+                const base64 = fs.readFileSync(imgPath, { encoding: "base64" });
+                return `data:image/jpeg;base64,${base64}`;
+            })
+        };
+
+        fs.writeFileSync(jsonPath, JSON.stringify(data));
+        images.forEach(e=>{
+            deleteFile(path.join(outputDir, e))
+        })
+    });
+}
+
+
+router.get("/bookjson/:id",async (req, res) => {
+    try {       
+        const bookdata = await Book.findById(req.params.id)
+
+        const jsonPath = path.join(__dirname, '../public/book-json', `${bookdata._id.toString()}.json`);
+        const PDFPath = path.join(__dirname, '../public/', bookdata.file);
+
+        if(!fs.existsSync(jsonPath)){
+            await parceToJsonGPT(PDFPath ,  jsonPath,bookdata._id.toString())
+        }
+        const jsondt = require(jsonPath)
+        return res.status(200).json( jsondt)
+    } catch (error) {return res.status(500).json({ status: false, message: error });}
+});
 
 router.get("/",async (req, res) => {
     try {
-        const type = req.query.catalog
-        // console.log(type);
+        const type = req.body.catalog
+        console.log(type);
         if(type){
             const a = await Book.find({catalog:type}).populate('catalog')
             res.status(200).json(a);
@@ -60,15 +118,18 @@ router.post("/add", uploadFiles,
     async(req, res)=>{
         // 401 ko co file | img 
         // 402 ko co book name
-        const {name,catalog} = req.body    
+
+        const {name,catalog,_id} = req.body    
         const {file,img} = req.files;
 
         if(!file || !img ){return res.status(401).json({error:'Không tìm thấy file'})}
         if(!name){return res.status(402).json({error:'Vui lòng nhập tên sách'})}
         
+
         try {
             const isExist = await Book.findOne({ name })
             const newBook = new Book({
+                _id,
                 name,
                 img:`booksf/${img[0].filename}`,
                 file:`booksf/${file[0].filename}`,
@@ -78,9 +139,13 @@ router.post("/add", uploadFiles,
                 newBook.save()
                 return res.status(200).json({
                     status:true,
-                    message:'them san pham thanh cong',
+                    message:'them san pham thanh cong'
                 })
             }else{
+                const tmpimgpath = path.join(__dirname, `../public/${newBook.img}`)
+                const tmppdfpath = path.join(__dirname, `../public/${newBook.file}`)
+                deleteFile(tmpimgpath)
+                deleteFile(tmppdfpath)
                 return res.status(403).json({error:'Tên sách đã tồn tại'})
             }
         }catch (error) {return res.status(500).json({error:'khong the them sach'})}
@@ -91,13 +156,11 @@ router.put("/edit/:id",uploadFiles,
     async(req, res) => {
         //200 thanh cong
         //400 thong tin nhap vao khong du
-        const id = req.params.id;
-        const {name,catalog,old_img,old_file} = req.body    
-        const {file,img} = req.files;
 
-        console.log(old_file);
-        
-                
+        const id = req.params.id;
+        const {name,catalog,} = req.body    
+        const file = req.files.file;
+        const img = req.files.img;     
         
         if(!name || !catalog){return res.status(400).json({ error:'Thông tin không đủ'})}
         try {
@@ -111,7 +174,6 @@ router.put("/edit/:id",uploadFiles,
             if(!!img){
                 update.img = `booksf/${img[0].filename}`;
             }
-
             const a = await Book.updateOne( { _id: id }, update )
             return res.status(200).json({ status: true});
         } catch (error) {
@@ -127,10 +189,14 @@ router.delete("/delete/:id", auth, ckAdmin,
             const book = await Book.findById(id);
             const imagePath = path.join(__dirname, `../public/${book.img}`);
             const filePath = path.join(__dirname, `../public/${book.file}`);
+            const jsonPath = path.join(__dirname, `../public/book-json/${book._id}.json`);
 
             console.log(imagePath);
+            
             deleteFile(imagePath)
             deleteFile(filePath)
+            // if
+            deleteFile(jsonPath)
 
             await Book.findByIdAndDelete(id)
 
