@@ -88,6 +88,8 @@ const Header = () => {
                         })}
                     </div>
                 </details>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSch4uW7lNtBMqBkqT2wusYIw7Xjzzm1CWYuFhzkm9iJz7M7gQ/viewform">Góp ý</a>
             
                 {(isadmin) ? <Link  href={"../admin"}>admin</Link>: <></> }
 
