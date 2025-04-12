@@ -3,6 +3,9 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+
+import { useSearchParams } from 'next/navigation';
+
 import Button from "react-bootstrap/Button";
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,25 +21,9 @@ const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
 const Bookspage=()=>{
     const [books, setBooks]= useState<M_Book[]>([]); 
-    const [issort, setissort]= useState<boolean>(false); 
-    // const [currentpage, setcurrentpage] = useState<number>(1);
 
-    const getbook=async()=>{
-        const queryParams = new URLSearchParams(window.location.search)
-        const catalog = queryParams.get('catalog')
-        let a = ''
-        if(catalog){
-            a=`?catalog=${catalog}`
-        }
-        const fe = await fetch(`${apiurl}/books${a}`,{
-            method:"GET"
-        });
-        const res = await fe.json()
-        if(fe.ok){
-            setBooks(res)
-        }
-    }
-
+    const searchParams = useSearchParams()
+    const catalog = searchParams.get("catalog")
 
     const handlesort=(type:string)=>{
         const sortedBooks = [...books];
@@ -54,8 +41,22 @@ const Bookspage=()=>{
     }
 
     useEffect(() => {
+        const getbook = async () => {
+            let a = ''
+            if (catalog) {
+                a = `?catalog=${catalog}`
+            }
+            const fe = await fetch(`${apiurl}/books${a}`, {
+                method: "GET"
+            });
+            const res = await fe.json()
+            if (fe.ok) {
+                setBooks(res)
+            }
+        }
+    
         getbook()
-    }, []);
+    }, [catalog]);
 
     return (<>
         <Head><title>SunnyHill Admin</title></Head>

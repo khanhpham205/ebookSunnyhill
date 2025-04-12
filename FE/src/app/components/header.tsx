@@ -4,9 +4,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
+// import Router from "next/router";
+import { useRouter } from 'next/navigation';
+
 import { useEffect, useState } from "react";
 import { useAuth } from '../Authcontext';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { FaSearch } from "react-icons/fa";
 
@@ -29,57 +31,8 @@ function removeVietnameseTones(str:string) {
       .toLowerCase();
 }
 
-
-
-
-function highlightMatchedWords(name:string, name_unsigned:string, userInput:string) {
-    const rawWords = userInput.trim().toLowerCase().split(/\s+/);
-    const keywords = rawWords.map(removeVietnameseTones);
-  
-    // Match từng từ không dấu trong unsigned title
-    let unsigned = name_unsigned;
-    let original = name;
-  
-    // Danh sách đoạn để hiển thị: [{ text, highlight }]
-    const result = [];
-    let lastIndex = 0;
-    for (const keyword of keywords) {
-        const matchIndex = unsigned.indexOf(keyword, lastIndex);
-        if (matchIndex === -1) continue;
-    
-        // Ước lượng vị trí tương ứng trong chuỗi gốc
-        const pre = unsigned.slice(lastIndex, matchIndex);
-        const preLen = pre.length;
-        const matchLen = keyword.length;
-    
-        // Tính vị trí tương ứng trong chuỗi gốc (gần đúng)
-        const origStart = lastIndex + (original.slice(lastIndex).indexOf(pre) || 0) + preLen;
-        const origEnd = origStart + matchLen;
-    
-        // Push đoạn trước match
-        if (origStart > lastIndex) {
-            result.push({ text: original.slice(lastIndex, origStart), highlight: false });
-        }
-    
-        // Push đoạn match
-        result.push({ text: original.slice(origStart, origEnd), highlight: true });
-    
-        // Cập nhật lại vị trí
-        lastIndex = origEnd;
-    }
-  
-    // Push phần còn lại sau match cuối
-    if (lastIndex < original.length) {
-        result.push({ text: original.slice(lastIndex), highlight: false });
-    }
-  
-    return result;
-}
-
-
-
-
 const Header = () => {
+    const router = useRouter();
     const { isLoggedIn,isadmin, logout } = useAuth();
     
     const [search,setsearch] = useState<string>('')
@@ -202,7 +155,7 @@ const Header = () => {
 
                 
 
-                {(isLoggedIn) ? <p className='regis'><Button onClick={logout} >Logout</Button>
+                {(isLoggedIn) ? <p className='regis'><Button onClick={()=>{logout();router.push('/register')}} >Logout</Button>
 
                 </p> : <Link className='regis' href={"../register"}>Resister</Link>}
             </nav>

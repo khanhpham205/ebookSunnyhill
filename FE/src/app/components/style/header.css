@@ -71,6 +71,7 @@ nav{
                 display: grid;
                 grid-template-columns: 20% 80%;
                 width: 100%;
+                border-radius: 5px;
                 column-gap:10px;
                 /* display: flex; */
                 /* justify-content: start; */
