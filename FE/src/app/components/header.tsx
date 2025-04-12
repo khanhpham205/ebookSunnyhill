@@ -54,7 +54,7 @@ const Header = () => {
         }
     
         const fetchSuggestions = async () => {
-            const fe = await fetch(`${apiurl}/book/search?searchname=${encodeURIComponent(debouncedQuery)}`);
+            const fe = await fetch(`${apiurl}/books/search?searchname=${encodeURIComponent(debouncedQuery)}`);
             const res = await fe.json();
             setSuggestions(res);
             // console.log(suggestions);
