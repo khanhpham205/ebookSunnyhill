@@ -11,7 +11,7 @@
 /* page */
 @import "./register/style.css";          /* register page */
 @import "./admin/style.css";             /* admin page */
-@import "./book/bookpage.css";           /* book page */
+@import "./book/bookpage.css";          
 
 
 :root {
