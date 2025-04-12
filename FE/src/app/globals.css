@@ -4,7 +4,6 @@
 @import "tailwindcss";
 
 
-
 /* components */
 @import "./components/style/header.css"; /* nav */
 @import "./components/style/banner.css"; /* banner */

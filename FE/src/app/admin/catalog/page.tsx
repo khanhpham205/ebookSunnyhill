@@ -21,7 +21,6 @@ const apiurl = process.env.NEXT_PUBLIC_API_URL;
 const Catalogpage = ()=>{
     const [showaddmodal,setshowaddmodal] = useState<boolean>(false)
     const [showupdatemodal,setshowupdatemodal] = useState<boolean>(false)
-    // const [catas,setcatas] = useState<M_Catalog[]>([])
     const [cata,setcata] = useState<M_Catalog>()
 
     const fetcher: Fetcher<M_Catalog[]> = (url:string)=>fetch(url).then(e=>e.json())

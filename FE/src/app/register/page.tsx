@@ -11,13 +11,15 @@ import { useEffect, useState } from "react";
 import { log } from "console";
 import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
+import { useAuth } from '../Authcontext';
 
 import dotenv from 'dotenv';
 dotenv.config()
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
-const Register:React.FC=()=>{
+const Register=()=>{
     const router = useRouter();
+    const { login,checkuser } = useAuth();
 
     useEffect(()=>{
 
@@ -50,6 +52,8 @@ const Register:React.FC=()=>{
         if(fe.ok){
             localStorage.setItem('JWT',res)
             toast.success('Đăng nhập thành công')
+            login()
+            checkuser()
             router.push("/")
         }else{
             toast.warning(res.error)

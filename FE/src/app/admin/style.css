@@ -21,13 +21,14 @@
         }
         .admin_cata{
             position: relative;
-            border: 2px solid;
             margin: 10px 0;
             border-radius: 10px;
             padding: 10px;
             display: flex;
             justify-content: start;
             align-items: start;
+            border: 2px solid var(--secondary);
+            background: var(--secondary);
             flex-direction: column;
             .handle{
                 position: absolute;
@@ -46,6 +47,8 @@
             border: 2px solid;
             border-radius: 20px;
             padding: 10px ;
+            border: 2px solid var(--secondary);
+            background: var(--secondary);
             height: 130px;
             >img{
                 border-radius: 10px;

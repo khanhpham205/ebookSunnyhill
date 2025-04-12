@@ -69,6 +69,15 @@ async function parceToJsonGPT(pdfPath, jsonPath, id) {
     });
 }
 
+function removeVietnameseTones(str) {
+    return str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .toLowerCase();
+}
+
 
 router.get("/bookjson/:id",async (req, res) => {
     try {       
@@ -87,7 +96,7 @@ router.get("/bookjson/:id",async (req, res) => {
 
 router.get("/",async (req, res) => {
     try {
-        const type = req.body.catalog
+        const type = req.query.catalog
         console.log(type);
         if(type){
             const a = await Book.find({catalog:type}).populate('catalog')
@@ -100,13 +109,43 @@ router.get("/",async (req, res) => {
         res.status(500).json({ status: false, message: error });
     }
 });
+
+router.get("/search",async (req, res) => {
+    try {
+        const q = req.query.searchname
+        const mode = req.query.mode
+        // const keywords = removeVietnameseTones(q).split(/\s+/);
+        // const keyword = removeVietnameseTones(q);
+        // const conditions = keywords.map(word => ({
+        //     name_unsigned: { $regex: word, $options: 'i' },
+        // }));
+        const keyword = removeVietnameseTones(q.trim().toLowerCase());
+        const parts = keyword.split(/\s+/);
+        const orderedRegex = parts.join('.*?');
+
+        if(!mode){
+            // console.log(123);
+            // const a = await Book.find({ $and: conditions }).limit(5);
+            const a = await Book.find({
+                name_unsigned: { $regex: orderedRegex, $options: 'i' },
+            }).populate('catalog').limit(5);
+            res.status(200).json(a);
+        }else{
+            const a = await Book.find({
+                name_unsigned: { $regex: keyword, $options: 'i' },
+            });
+            res.status(200).json(a);
+        }
+    } catch (error) {res.status(500).json({ status: false, message: error })}
+});
+
 router.get("/generalinfo",async (req, res) => {
     try {
         const bookdata = await Book.find()
         const userdata = await User.find()
         res.status(200).json([
             {
-                name:"Kho sách điện tử",
+                name:"Kho sách",
                 data:bookdata.length
             },
             {
