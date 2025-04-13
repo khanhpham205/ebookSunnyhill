@@ -12,7 +12,7 @@ function removeVietnameseTones(str) {
 
 const booksSchema = new Schema({
     name: { type: String, required: true, unique: true},
-    name_unsigned: {type: String, required: true, unique: true},
+    name_unsigned: {type: String},
     img:{ type: String, required:true},
     file: { type: String, required: true},
     catalog:{ type: Schema.Types.ObjectId, ref: 'catalogs'}
