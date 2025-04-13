@@ -6,7 +6,7 @@
 
 "use client";
 import useSWR from 'swr'
-import { Fetcher } from 'swr'
+import { Fetcher, mutate } from 'swr'
 import React, { useState } from 'react';
 import Button from "react-bootstrap/Button";
 
@@ -49,6 +49,7 @@ const Catalogpage = ()=>{
         const res = await fe.json()
         if(fe.ok){
             toast.success('Xóa danh mục thành công')
+            mutate(`${apiurl}/catalogs`)
         }else{
             toast.warning(res.error)
         }

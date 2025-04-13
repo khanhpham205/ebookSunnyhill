@@ -4,9 +4,9 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { mutate } from 'swr'
 
-import dotenv from 'dotenv';
-dotenv.config()
+
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
 interface isShow {
@@ -45,6 +45,7 @@ function AddCata(props: isShow) {
         if(fe.ok){
             toast.success('Thêm danh mục thành công')
             handleClose()
+            mutate(`${apiurl}/catalogs`)
         }else{
             toast.warning(res.error)
         }

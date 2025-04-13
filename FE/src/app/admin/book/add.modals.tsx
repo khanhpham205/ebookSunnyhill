@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { mutate } from 'swr'
 
 import dotenv from 'dotenv';
 dotenv.config()
@@ -56,6 +57,7 @@ function Addbook(props: isShow) {
         if(fe.ok){
             toast.success('Thêm sách thành công')
             handleClose()
+            mutate(`${apiurl}/books/`)
         }else{
             toast.warning(res.error)
         }

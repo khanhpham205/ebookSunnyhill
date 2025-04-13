@@ -5,6 +5,8 @@ import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { title } from 'process';
+import { mutate } from 'swr'
+
 import dotenv from 'dotenv';
 dotenv.config()
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
@@ -53,6 +55,7 @@ function EditCata(props: isShow) {
         if(fe.ok){
             toast.success('sua post thanh cong')
             handleClose()
+            mutate(`${apiurl}/catalogs`)
         }else{
             toast.warning(res.error)
         }

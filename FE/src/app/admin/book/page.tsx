@@ -9,13 +9,10 @@ import React, { useEffect, useState } from 'react';
 import Button from "react-bootstrap/Button";
 import Addbook from "./add.modals";
 import Editbook from './edit.modals';
-// import useSWR from 'swr'
-// import { Fetcher } from 'swr'
+import useSWR, { Fetcher, mutate } from 'swr';
 import { toast } from 'react-toastify';
 
 
-import dotenv from 'dotenv';
-dotenv.config()
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
 
@@ -32,6 +29,7 @@ const handledeletebook = async(id:string)=>{
     const res = await fe.json()
     if(fe.ok){
         toast.success('Xóa sách thành công')
+        mutate(`${apiurl}/books/`)
     }else{
         toast.warning(res.error)
     }
@@ -40,23 +38,20 @@ const handledeletebook = async(id:string)=>{
 
 const Bookpage = ()=>{
     const [book,setbook] = useState<M_Book>()
-    const [books,setbooks] = useState<M_Book[]>([])
     const [showaddmodal,setshowaddmodal] = useState<boolean>(false)
     const [showupdatemodal,setshowupdatemodal] = useState<boolean>(false)
 
-    async function fetchbooks(){
-        const fe = await fetch(`${apiurl}/books/`,{
-            method:'GET',
-        });
-        const res = await fe.json() 
-        if(fe.ok){
-            setbooks(res)            
+    const fetcher: Fetcher<M_Book[]> = (url:string)=>fetch(url).then(e=>e.json())
+    const {data,error, isLoading} = useSWR(
+        `${apiurl}/books/`,
+        fetcher,
+        {
+        revalidateIfStale: true,
+        revalidateOnFocus:false,
+        revalidateOnReconnect: false,
         }
-    }
-    
-    useEffect(() => {
-        fetchbooks()
-    }, []);
+    )
+
     return(<>
         <Addbook
             ShowModel={showaddmodal} 
@@ -73,7 +68,7 @@ const Bookpage = ()=>{
             className='admin_bt_add'
             onClick={()=>{setshowaddmodal(true)}}
         >Add</button>
-        {books?.map((e,i)=>{
+        {data?.map((e,i)=>{
            
             return(<div className='admin_book_card'>
                 <img src={`${apiurl}/${e.img}`} loading="lazy"/>

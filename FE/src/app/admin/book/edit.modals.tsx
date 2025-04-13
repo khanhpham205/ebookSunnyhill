@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import dotenv from 'dotenv';
+import { mutate } from 'swr';
 dotenv.config()
 const apiurl = process.env.NEXT_PUBLIC_API_URL;
 
@@ -73,6 +74,7 @@ function EditBook(props: isShow) {
         if(fe.ok){
             toast.success('Sửa book thàng công')
             handleClose()
+            mutate(`${apiurl}/books/`)
         }else{
             toast.warning(res.error)
         }
