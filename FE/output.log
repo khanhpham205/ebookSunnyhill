@@ -9,5 +9,4 @@ sh: 1: cls: not found
    - Network:      http://103.170.122.241:3000
 
  ✓ Starting...
- ✓ Ready in 1053ms
-Warning: Please use the `legacy` build in Node.js environments.
+ ✓ Ready in 1024ms
