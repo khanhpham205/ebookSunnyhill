@@ -8,7 +8,7 @@ import { AuthProvider } from './Authcontext';
 import "./globals.css";
 
 import Header from "./components/header";
-
+import Footer from "./components/footer";
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -41,6 +41,8 @@ export default function RootLayout({
                 {children}
 
                 <ToastContainer autoClose={5000} position="bottom-right" />
+
+                <Footer />
             </AuthProvider>
             </body>
         </html>

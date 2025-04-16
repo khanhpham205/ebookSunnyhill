@@ -6,6 +6,7 @@
 
 /* components */
 @import "./components/style/header.css"; /* nav */
+@import "./components/style/footer.css"; /* footer */
 @import "./components/style/banner.css"; /* banner */
 
 /* page */
@@ -56,11 +57,6 @@
 
 /* PC */
 @media only screen and (min-width: 1180px){
-    /* 
-        12cols
-        gridsystem : 1180px
-        colsOfCard : 3
-    */
     :root{
         --minWidthColsSystem:1180px;
         --numOfColsSystem:12;
@@ -78,11 +74,6 @@
 }
 /* TABLET */
 @media only screen and (max-width: 1180px) and (min-width:721px) {
-    /* 
-        6cols
-        gridsystem full man hinh
-        colsOfCard : 2
-    */
     :root{
         --minWidthColsSystem:720px;
 
@@ -111,14 +102,18 @@
         grid-column: span 2 !important;
     }
 
+    #footer{
+        #info{
+            grid-column: span 4;
+        }
+        #holder{
+            display: none;
+        }
+    }
+
 }
 /* MOBILE */
 @media only screen and (max-width: 720px) {
-    /* 
-        6cols
-        gridsystem full man hinh
-        colsOfCard : 3
-    */
     :root{
         --minWidthColsSystem: 100% ;
         --numOfColsSystem:6;
@@ -143,6 +138,15 @@
     }
     .generalinfo{
         grid-column: span 2 !important;
+    }
+
+    #footer{
+        #info{
+            grid-column: span 4;
+        }
+        #holder{
+            display: none;
+        }
     }
     
     
@@ -183,6 +187,7 @@ body {
         align-items: center;
     }
 }
+
 input:not([type=submit]),textarea,select{
     background: var(--secondary);
     border: none;

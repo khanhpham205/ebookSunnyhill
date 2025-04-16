@@ -1,0 +1,27 @@
+#footer{
+    background-color: #272727;
+    /* margin-top: 10px; */
+    /* height: 400px; */
+    padding-top: 50px ;
+    >img{
+        grid-column: span 2 ;
+    }
+    #info{
+        grid-column: span 7;
+    }
+    #holder{
+        grid-column: span 3 ;
+    }
+    #info{
+        /* grid-column: span 12; */
+        font-size: 20px;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: span 2;
+        text-decoration: none;
+        color: inherit;
+    }
+}
